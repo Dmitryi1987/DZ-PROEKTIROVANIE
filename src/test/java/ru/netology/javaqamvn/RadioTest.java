@@ -8,7 +8,7 @@ public class RadioTest {
     @Test
     public void shouldIncreaseStation() {
         Radio station = new Radio();
-        station.increaseStation(3);
+        station.setCurrentStation(3);
 
         int expected = 4;
         int actual = station.increaseStation();
@@ -20,10 +20,10 @@ public class RadioTest {
     @Test
     public void shouldDecreaseStation() {
         Radio station = new Radio();
-        station.decreaseStation(5);
+        station.setCurrentStation(5);
 
         int expected = 4 ;
-        int actual = station.increaseStation();
+        int actual = station.decreaseStation();
 
         Assertions.assertEquals(expected, actual);
 
@@ -32,10 +32,10 @@ public class RadioTest {
     @Test
     public void shouldCurrentStation() {
         Radio station = new Radio();
-        station.CurrentStation(5);
+        station.setCurrentStation(5);
 
         int expected = 5;
-        int actual = station.CurrentStation();
+        int actual = station.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -43,7 +43,7 @@ public class RadioTest {
     @Test
     public void  shouldIncreaseVolume() {
         Radio volume = new Radio();
-        volume.increaseVolume(30);
+        volume.setCurrentVolume(30);
 
         int expected = 31;
         int actual = volume.increaseVolume();
@@ -54,7 +54,7 @@ public class RadioTest {
     @Test
     public void  shouldDecreaseVolume() {
         Radio volume = new Radio();
-        volume.decreaseVolume(50);
+        volume.setCurrentVolume(50);
 
         int expected = 49;
         int actual = volume.decreaseVolume();
@@ -65,10 +65,10 @@ public class RadioTest {
     @Test
     public void shouldSetCurrentVolume() {
         Radio volume = new Radio();
-        volume.inputCurrentVolume(55);
+        volume.setCurrentVolume(55);
 
         int expected = 55;
-        int actual = volume.currentVolume;
+        int actual = volume.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }

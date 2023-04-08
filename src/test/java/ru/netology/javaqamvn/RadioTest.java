@@ -23,7 +23,7 @@ public class RadioTest {
         station.setCurrentStation(10);
 
         int expected = 0;
-        int actual = station.next();
+        int actual = station.overflowUP();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -34,7 +34,7 @@ public class RadioTest {
         station.setCurrentStation(9);
 
         int expected = 0;
-        int actual = station.next();
+        int actual = station.overflowUP();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -45,7 +45,7 @@ public class RadioTest {
         station.setCurrentStation(-1);
 
         int expected = 9;
-        int actual = station.prev();
+        int actual = station.overflowLOW();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -56,7 +56,7 @@ public class RadioTest {
         station.setCurrentStation(0);
 
         int expected = 9;
-        int actual = station.prev();
+        int actual = station.overflowLOW();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -67,7 +67,7 @@ public class RadioTest {
         station.setCurrentStation(-1);
 
         int expected = 9;
-        int actual = station.prev();
+        int actual = station.overflowLOW();
 
         Assertions.assertEquals(expected, actual);
     }

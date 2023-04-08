@@ -30,14 +30,14 @@ public class Radio {
         return currentStation;
     }
 
-    public int next() {
+    public int overflowUP() {
         if (currentStation == 9) {
             currentStation = 0;
         }
         return currentStation;
     }
 
-    public int prev() {
+    public int overflowLOW() {
         if (currentStation == 0) {
             currentStation = 9;
         }

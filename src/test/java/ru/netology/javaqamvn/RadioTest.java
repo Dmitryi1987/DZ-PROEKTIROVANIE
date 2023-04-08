@@ -13,6 +13,7 @@ public class RadioTest {
         int expected = 4;
         int actual = station.increaseStation();
 
+
         Assertions.assertEquals(expected, actual);
     }
 

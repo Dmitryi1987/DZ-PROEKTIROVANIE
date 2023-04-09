@@ -6,8 +6,16 @@ import org.junit.jupiter.api.Test;
 public class RadioTest {
 
     @Test
+    public void test() {
+        Radio station = new Radio(10);
+
+        Assertions.assertEquals(9, station.getMaxStation());
+       Assertions.assertEquals(0,station.getMinStation());
+       Assertions.assertEquals(0, station.getCurrentStation());
+    }
+    @Test
     public void shouldIncreaseStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(3);
 
         int expected = 4;
@@ -19,7 +27,7 @@ public class RadioTest {
 
     @Test
     public void increaseMaxStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(10);
 
         int expected = 0;
@@ -30,7 +38,7 @@ public class RadioTest {
 
     @Test
     public void MaxStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(9);
 
         int expected = 9;
@@ -41,7 +49,7 @@ public class RadioTest {
 
     @Test
     public void decreaseMinStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(-1);
 
         int expected = 9;
@@ -52,7 +60,7 @@ public class RadioTest {
 
     @Test
     public void MinStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(0);
 
         int expected = 0;
@@ -63,7 +71,7 @@ public class RadioTest {
 
     @Test
     public void shouldStation9() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(9);
 
         int expected = 0;
@@ -74,7 +82,7 @@ public class RadioTest {
 
     @Test
     public void shouldDecreaseStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(5);
 
         int expected = 4;
@@ -85,7 +93,7 @@ public class RadioTest {
 
     @Test
     public void shouldStation0() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(0);
 
         int expected = 9;
@@ -96,7 +104,7 @@ public class RadioTest {
 
     @Test
     public void shouldCurrentStation() {
-        Radio station = new Radio();
+        Radio station = new Radio(10);
         station.setCurrentStation(5);
 
         int expected = 5;
@@ -107,7 +115,7 @@ public class RadioTest {
 
     @Test
     public void shouldIncreaseVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(30);
 
         int expected = 31;
@@ -118,7 +126,7 @@ public class RadioTest {
 
     @Test
     public void MaxVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(100);
 
         int expected = 100;
@@ -129,7 +137,7 @@ public class RadioTest {
 
     @Test
     public void shouldDecreaseVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(50);
 
         int expected = 49;
@@ -140,7 +148,7 @@ public class RadioTest {
 
     @Test
     public void MinVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(0);
 
         int expected = 0;
@@ -151,7 +159,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetCurrentVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(55);
 
         int expected = 55;
@@ -162,7 +170,7 @@ public class RadioTest {
 
     @Test
     public void shouldMinCurrentVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(-110);
 
         int expected = 0;
@@ -173,7 +181,7 @@ public class RadioTest {
 
     @Test
     public void shouldMaxCurrentVolume() {
-        Radio volume = new Radio();
+        Radio volume = new Radio(10);
         volume.setCurrentVolume(150);
 
         int expected = 0;

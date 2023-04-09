@@ -1,19 +1,38 @@
 package ru.netology.javaqamvn;
 
 public class Radio {
-    private int currentStation;
+
     private int currentVolume;
+    private int minStation;
+    private int maxStation;
+    private int currentStation = minStation;
+    public Radio (int minStation, int maxStation) {
+        this.minStation= minStation;
+        this.maxStation = maxStation;
+        this.currentStation = minStation;
+    }
+    public Radio (int size) {
+        maxStation = minStation + size - 1;
+    }
 
     public int getCurrentStation() {
         return currentStation;
+    }
+    public int getMaxStation() {
+        return maxStation;
+    }
+
+    public int getMinStation() {
+        return minStation;
     }
 
     public int getCurrentVolume() {
         return currentVolume;
     }
 
+
     public int increaseStation() {
-        if (currentStation < 9) {
+        if (currentStation < maxStation) {
             currentStation++;
         } else {
             currentStation = 0;

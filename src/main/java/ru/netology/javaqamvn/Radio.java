@@ -30,20 +30,6 @@ public class Radio {
         return currentStation;
     }
 
-    public int overflowUP() {
-        if (currentStation == 9) {
-            currentStation = 0;
-        }
-        return currentStation;
-    }
-
-    public int overflowLOW() {
-        if (currentStation == 0) {
-            currentStation = 9;
-        }
-        return currentStation;
-    }
-
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation > 9) {
             newCurrentStation = 0;
